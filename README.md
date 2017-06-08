@@ -1,7 +1,7 @@
 cuckoo-filter-redis
 ===================
 
-Set of Lua stored functions implementing Cuckoo Filter backed by Redis.
+Set of Lua stored functions implementing [Cuckoo Filter](https://www.cs.cmu.edu/~dga/papers/cuckoo-conext2014.pdf) backed by Redis.
 
 ## Requirements
 
@@ -26,7 +26,7 @@ Response: true upon success
 Add some elements:
 
 ```
-redis-cli --eval cf_insert.lua cf , elem1 elem2 very_long_elemnt_number_3
+redis-cli --eval cf_insert.lua cf , elem1 elem2 very_long_element_number_3
 ```
 
 Response: true or false for each element upon success
