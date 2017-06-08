@@ -131,7 +131,7 @@ local function set_row(key, bucket_size, bits, index, row)
                 table.insert(replace_range, curbyte)
             end
             if (cell_leftover + shift > 8) then
-                table.insert(bit.band(bit.lshift(cell:byte(-1), 8 - shift), bytemask))
+                table.insert(replace_range, bit.band(bit.lshift(cell:byte(-1), 8 - shift), bytemask))
             end
         end
         shift = math.fmod(shift + bits, 8)
